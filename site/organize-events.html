@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organize Events | Youth Adaptive Sports NYC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">
+    <img src="assets/img/logo.svg" alt="Youth Adaptive Sports NYC logo">
+  </a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="permits.html">Permits</a></li>
+      <li><a class="active" href="organize-events.html">Organize Events</a></li>
+      <li><a href="about-me.html">About Me</a></li>
+    </ul>
+  </nav>
+  <button class="login" id="login-trigger" type="button">
+    <span class="avatar" id="login-avatar">&#128100;</span>
+    <span id="login-label">Log In</span>
+  </button>
+</header>
+
+<div class="modal-overlay" id="auth-modal" hidden>
+  <div class="modal-box">
+    <button class="modal-close" id="auth-modal-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="auth-modal-title">Log In</h2>
+
+    <form id="auth-email-form" class="auth-form">
+      <div class="auth-field" id="auth-name-field" hidden>
+        <label for="auth-name">Your name</label>
+        <input type="text" id="auth-name" autocomplete="name">
+      </div>
+      <div class="auth-field">
+        <label for="auth-email">Email</label>
+        <input type="email" id="auth-email" required autocomplete="email">
+      </div>
+      <div class="auth-field">
+        <label for="auth-password">Password</label>
+        <input type="password" id="auth-password" required autocomplete="current-password" minlength="6">
+      </div>
+      <p class="auth-error" id="auth-error" hidden></p>
+      <button type="submit" class="btn-filled auth-submit" id="auth-submit-btn">Log In</button>
+    </form>
+
+    <p class="auth-toggle">
+      <span id="auth-toggle-text">Don't have an account?</span>
+      <button type="button" id="auth-toggle-btn" class="link-btn">Sign Up</button>
+    </p>
+
+    <div class="auth-divider"><span>or</span></div>
+
+    <button type="button" id="google-signin-btn" class="google-btn">Sign in with Google</button>
+  </div>
+</div>
+
+<section class="events-hero">
+  <h1>Organize Events</h1>
+  <p>
+    This space is where parents can organize an athletic event with other parents whose children
+    have similar disabilities. Organizing these events for children will foster a sense of
+    community and belonging, while they also have an amazing time!
+  </p>
+</section>
+
+<section class="events-groups wrap">
+  <div class="group-tab-list tab-list" role="tablist">
+    <button class="group-tab-btn tab-btn active" data-group="mild" role="tab" aria-selected="true">
+      Mild Neuromuscular Conditions
+    </button>
+    <button class="group-tab-btn tab-btn" data-group="moderate" role="tab" aria-selected="false">
+      Moderate Neuromuscular Conditions
+    </button>
+    <button class="group-tab-btn tab-btn" data-group="neurodivergent" role="tab" aria-selected="false">
+      Neurodivergent Conditions (such as ASD and Down's Syndrome)
+    </button>
+    <button class="group-tab-btn tab-btn" data-group="other" role="tab" aria-selected="false">
+      Other Disability
+    </button>
+  </div>
+
+  <div class="chat-panel active" data-group="mild">
+    <div class="chat-messages"><p class="chat-empty">Loading messages…</p></div>
+    <div class="chat-composer" data-group="mild">
+      <form class="chat-form" data-group="mild" hidden>
+        <textarea rows="2" maxlength="1000" placeholder="Share an idea, ask a question, or plan an event…" required></textarea>
+        <button type="submit" class="btn-filled">Post</button>
+      </form>
+      <button type="button" class="btn-filled login-to-post-btn">Log in to post a message</button>
+    </div>
+  </div>
+
+  <div class="chat-panel" data-group="moderate">
+    <div class="chat-messages"><p class="chat-empty">Loading messages…</p></div>
+    <div class="chat-composer" data-group="moderate">
+      <form class="chat-form" data-group="moderate" hidden>
+        <textarea rows="2" maxlength="1000" placeholder="Share an idea, ask a question, or plan an event…" required></textarea>
+        <button type="submit" class="btn-filled">Post</button>
+      </form>
+      <button type="button" class="btn-filled login-to-post-btn">Log in to post a message</button>
+    </div>
+  </div>
+
+  <div class="chat-panel" data-group="neurodivergent">
+    <div class="chat-messages"><p class="chat-empty">Loading messages…</p></div>
+    <div class="chat-composer" data-group="neurodivergent">
+      <form class="chat-form" data-group="neurodivergent" hidden>
+        <textarea rows="2" maxlength="1000" placeholder="Share an idea, ask a question, or plan an event…" required></textarea>
+        <button type="submit" class="btn-filled">Post</button>
+      </form>
+      <button type="button" class="btn-filled login-to-post-btn">Log in to post a message</button>
+    </div>
+  </div>
+
+  <div class="chat-panel" data-group="other">
+    <div class="chat-messages"><p class="chat-empty">Loading messages…</p></div>
+    <div class="chat-composer" data-group="other">
+      <form class="chat-form" data-group="other" hidden>
+        <textarea rows="2" maxlength="1000" placeholder="Share an idea, ask a question, or plan an event…" required></textarea>
+        <button type="submit" class="btn-filled">Post</button>
+      </form>
+      <button type="button" class="btn-filled login-to-post-btn">Log in to post a message</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <img src="assets/img/logo.svg" alt="Youth Adaptive Sports NYC logo">
+    <p class="footer-contact">
+      New York City, NY | info@youthadaptedsports.nyc | Building inclusive communities for all
+    </p>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="Instagram">ig</a>
+      <a href="#" aria-label="YouTube">yt</a>
+      <a href="#" aria-label="X">x</a>
+      <a href="#" aria-label="LinkedIn">in</a>
+      <a href="#" aria-label="TikTok">tt</a>
+    </div>
+  </div>
+  <p class="copyright">&copy; 2026 Youth Adaptive Sports NYC. All Rights Reserved.</p>
+</footer>
+
+<script type="module" src="assets/js/auth-ui.js"></script>
+<script type="module" src="assets/js/organize-events.js"></script>
+
+</body>
+</html>

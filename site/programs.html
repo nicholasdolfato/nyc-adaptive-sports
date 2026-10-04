@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programs | Youth Adaptive Sports NYC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700;800;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">
+    <img src="assets/img/logo.svg" alt="Youth Adaptive Sports NYC logo">
+  </a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="programs.html">Programs</a></li>
+      <li><a href="permits.html">Permits</a></li>
+      <li><a href="organize-events.html">Organize Events</a></li>
+      <li><a href="about-me.html">About Me</a></li>
+    </ul>
+  </nav>
+  <button class="login" id="login-trigger" type="button">
+    <span class="avatar" id="login-avatar">&#128100;</span>
+    <span id="login-label">Log In</span>
+  </button>
+</header>
+
+<div class="modal-overlay" id="auth-modal" hidden>
+  <div class="modal-box">
+    <button class="modal-close" id="auth-modal-close" type="button" aria-label="Close">&times;</button>
+    <h2 id="auth-modal-title">Log In</h2>
+
+    <form id="auth-email-form" class="auth-form">
+      <div class="auth-field" id="auth-name-field" hidden>
+        <label for="auth-name">Your name</label>
+        <input type="text" id="auth-name" autocomplete="name">
+      </div>
+      <div class="auth-field">
+        <label for="auth-email">Email</label>
+        <input type="email" id="auth-email" required autocomplete="email">
+      </div>
+      <div class="auth-field">
+        <label for="auth-password">Password</label>
+        <input type="password" id="auth-password" required autocomplete="current-password" minlength="6">
+      </div>
+      <p class="auth-error" id="auth-error" hidden></p>
+      <button type="submit" class="btn-filled auth-submit" id="auth-submit-btn">Log In</button>
+    </form>
+
+    <p class="auth-toggle">
+      <span id="auth-toggle-text">Don't have an account?</span>
+      <button type="button" id="auth-toggle-btn" class="link-btn">Sign Up</button>
+    </p>
+
+    <div class="auth-divider"><span>or</span></div>
+
+    <button type="button" id="google-signin-btn" class="google-btn">Sign in with Google</button>
+  </div>
+</div>
+
+<section class="programs-hero">
+  <h1>Adaptive Sports Programs in NYC</h1>
+  <p>
+    Below is information about four top youth adaptive sports programs in New York City.
+    Click to learn more about each program and what they offer for your child!
+  </p>
+</section>
+
+<section class="programs-tabs wrap">
+  <div class="tab-list" role="tablist">
+    <button class="tab-btn active" data-tab="keen" role="tab" aria-selected="true">KEEN</button>
+    <button class="tab-btn" data-tab="commonpoint" role="tab" aria-selected="false">Commonpoint</button>
+    <button class="tab-btn" data-tab="play4autism" role="tab" aria-selected="false">Play4Autism</button>
+    <button class="tab-btn" data-tab="nycparks" role="tab" aria-selected="false">NYC Parks</button>
+  </div>
+
+  <div class="tab-panels">
+    <div class="tab-panel active" data-panel="keen">
+      <img class="placeholder-img" src="assets/img/programs-keen.avif" alt="KEEN program">
+      <div class="panel-text">
+        <h3>KEEN (Kids Enjoy Exercise Now)</h3>
+        <ul>
+          <li>Ages 5–21 with physical and developmental disabilities</li>
+          <li>Free, volunteer-run, non-competitive</li>
+          <li>Tailored to each athlete's needs</li>
+          <li>Seasonal: fall, winter, spring, summer</li>
+        </ul>
+        <p>
+          <strong>Mission:</strong> Empower youth with disabilities and impact volunteer coaches
+          through participation in free, non-competitive, one-on-one programs of physical
+          activity and fun, supporting the overall health and well-being of all participants.
+        </p>
+        <p><strong>Fall Season Programs</strong></p>
+        <ul>
+          <li>
+            <strong>KEEN Sports:</strong> loosely-structured sports activities and free play
+            opportunities — hoops, scooters, t-ball, soccer, relay, ball play, and more
+          </li>
+          <li>
+            <strong>KEEN Yoga:</strong> poses taught in a way accessible to all athletes, with
+            modifications for individual needs; music and stories incorporated
+          </li>
+          <li>
+            <strong>KEEN Swim:</strong> swim, splash, and play in the water with life jackets and
+            pool toys; supervised, no prior swim training needed — rarely instructional, mostly
+            for getting used to the water
+          </li>
+          <li>
+            <strong>KEEN Fit:</strong> a fitness program for teens, with each athlete paired with
+            a volunteer to assist with exercises
+          </li>
+          <li>
+            <strong>KEEN Basketball:</strong> shooting, ball handling, and footwork in a team
+            setting, plus 1-on-1 sessions between athlete and volunteer
+          </li>
+          <li>
+            <strong>KEEN Dance:</strong> a session leader facilitates dance options and guides
+            athletes through movement exercises
+          </li>
+          <li>Also offers cooking classes and online classes, plus other sports like flag football and soccer</li>
+        </ul>
+        <p>
+          Online sessions are Fridays at 5pm for Dance; in-person activities run all day
+          Saturdays and Sundays.
+        </p>
+        <p>
+          <strong>Contact:</strong> P.O. Box 5115, New York, NY 10185 
+          917-830-5725 · <a href="mailto:info@keennewyork.org">info@keennewyork.org</a>
+        </p>
+        <p>For more info, visit <a href="https://www.keennewyork.org" target="_blank" rel="noopener"> keennewyork.org</a></p>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="commonpoint">
+      <img class="placeholder-img" src="assets/img/programs-keen.avif" alt="Commonpoint program">
+      <div class="panel-text">
+        <h3>Commonpoint</h3>
+        <div class="black-text">
+          <ul>
+            <li>Commonpoint is a community-centric nonprofit, serving diverse audiences through every chapter of life, across the five boroughs and beyond. We offer a rich range of services through our vast network of professionals, social workers, and volunteers, giving people the tools and resources to connect and grow.</li>
+            <li>Mission: Commonpoint is a social services organization that meets the diverse needs of New York City and beyond. We offer a wide range of programs for people of all ages, ability levels, and backgrounds to connect and grow together.</li>
+            <li>Values: Kindness, Repairing the world, Social Justice, Inclusivity</li>
+            <li>Has numerous programs for adults and kids in NYC and just outside NYC</li>
+            <li>Sports Programs for Children with Developmental Disabilities:
+              <ul>
+                <li>Ages 5-17</li>
+                <li>Programs change seasonally</li>
+                <li>Fall season programs in Central Queens:
+                  <ul>
+                    <li>67-09 108 Street,</li>
+                    <li>Forest Hills, New York 11375</li>
+                    <li>Swimming
+                      <ul>
+                        <li>14 Sundays beginning September 14th</li>
+                        <li>45 minute sessions</li>
+                        <li>Levels: Foundational, intermediate, advanced (teens only)</li>
+                        <li>$630</li>
+                      </ul>
+                    </li>
+                    <li>Karate
+                      <ul>
+                        <li>8 Sundays beginning October 19th</li>
+                        <li>Hour-long sessions</li>
+                        <li>Ages 5-14</li>
+                        <li>From website: Our Karate class helps children redirect their natural impulses toward aggression and channels them in constructive, helpful, and beneficial ways, while helping them learn about respect, focus, honor and discipline</li>
+                        <li>$200</li>
+                      </ul>
+                    </li>
+                    <li>Basketball Buddies
+                      <ul>
+                        <li>8 Sundays beginning October 19th</li>
+                        <li>Hour-long sessions</li>
+                        <li>Ages 5-10</li>
+                        <li>Promoting exercise, teaches children basic basketball skills</li>
+                        <li>Helps children improve socialization and listening skills, following 1 to 2 step directives</li>
+                        <li>$200</li>
+                      </ul>
+                    </li>
+                    <li>Soccer Stars
+                      <ul>
+                        <li>8 Wednesdays beginning October 15th</li>
+                        <li>Hour-long sessions (6:00-7:00)</li>
+                        <li>Ages 5-10</li>
+                        <li>Promoting exercise, teaches children basic soccer skills</li>
+                        <li>Helps children improve socialization and listening skills, following 1 to 2 step directives</li>
+                        <li>$200</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Fall season programs at Sam Field Center:
+                  <ul>
+                    <li>58-20 Little Neck Parkway,</li>
+                    <li>Little Neck, New York 11362</li>
+                    <li>Zumba (Wednesdays)
+                      <ul>
+                        <li>8 weeks beginning October 8th</li>
+                        <li>6:30-7:30</li>
+                        <li>$250</li>
+                        <li>From website: Learn fun dance moves while improving physical fitness and coordination! This class also helps boost mood and creates a sense of belonging.</li>
+                      </ul>
+                    </li>
+                    <li>Basketball Buddies (Thursdays)
+                      <ul>
+                        <li>8 weeks beginning October 9th</li>
+                        <li>6:15-7:15</li>
+                        <li>$250</li>
+                        <li>Teaches skills + drills needed to become a basketball star</li>
+                        <li>Also teaches sportsmanship + team building</li>
+                        <li>Trophy night at the end of the Fall season!</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Note: Intake required (google form + interview) before registering online
+                  <ul>
+                    <li>For more information, contact specialservices@commonpoint.org or click <a href="https://docs.google.com/forms/d/13ZVBCRAPZ-_WMTOp6lv0-JC_L6hSN9rZfSF_Pju03Gg/viewform?edit_requested=true" target="_blank" rel="noopener">here</a> to begin an intake</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Contact Information:
+              <ul>
+                <li>Mailing Address:</li>
+              </ul>
+            </li>
+          </ul>
+          <p>Commonpoint</p>
+          <p>58-20 Little Neck Parkway</p>
+          <p>Little Neck, New York 11362</p>
+          <ul>
+            <li>(718) 225-6750</li>
+          </ul>
+          <ul>
+            <li>For more info about the Commonpoint programs, click <a href="https://www.commonpoint.org/program/sports-programs-children-with-developmental-disabilities" target="_blank" rel="noopener">here</a> as they update seasonally</li>
+          </ul>
+          <p>To explore the website more, visit the <a href="https://www.commonpoint.org/" target="_blank" rel="noopener">home page</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="play4autism">
+      <img class="placeholder-img" src="assets/img/programs-keen.avif" alt="Play4Autism program">
+      <div class="panel-text">
+        <h3>Play4Autism</h3>
+        <div class="black-text">
+          <ul>
+            <li>Overall goal: Connecting Children with Autism to sports and recreational activities</li>
+            <li>Contact at 347-736-0025</li>
+            <li>Description from Website: Play4Autism offers a variety of programs designed to help children &amp; adults on the autism spectrum develop social, communication, and leadership skills through sports and recreational activities. These programs are part of the "Kidz into Action" initiative, which aims to improve the self-esteem and social interaction of children &amp; adults on the spectrum through interactive activities in a healthy, loving, and inclusive environment.</li>
+            <li>Kidz Into Action Program:
+              <ul>
+                <li>In NYC, offered in Queens and Manhattan</li>
+                <li>Ages 3+</li>
+                <li>Programs designed to create inclusive community for children and adults. Individuals w/ autism and people with diverse abilities can thrive in a supportive environment.</li>
+                <li>Programs Offered:
+                  <ul>
+                    <li>Open Sports Club:
+                      <ul>
+                        <li>Saturdays, from 11am to 1pm, every other week</li>
+                        <li>Location: Dry Harbor Playground, Forest Park Drive 80-9, 80-11 Myrtle Ave, Glendale, NY 11385</li>
+                      </ul>
+                    </li>
+                    <li>Bowling</li>
+                    <li>Martial Arts</li>
+                    <li>Cross Fit Fitness</li>
+                    <li>Dance</li>
+                    <li>Fitness Club</li>
+                    <li>Creative "yoga"</li>
+                    <li>Weekend Basketball + Soccer</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Annual Membership:
+              <ul>
+                <li>One Child: $95.00</li>
+                <li>Two Children: $165.00</li>
+                <li>Three Children: $240.00</li>
+                <li>Perks:
+                  <ul>
+                    <li>1. Weekend Open Sports Programs, Sports, Arts &amp; Crafts and Creative "YOGA" Fitness Clubs are "Free of Charge."</li>
+                    <li>2. All other programs have significant discounts for members.</li>
+                    <li>3. Free Membership for siblings not on the spectrum</li>
+                    <li>4. Tickets to local professional sporting events and more!</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>For more information, visit <a href="https://play4autismkia.wixsite.com/kidz-into-action" target="_blank" rel="noopener">https://play4autismkia.wixsite.com/kidz-into-action</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="nycparks">
+      <img class="placeholder-img" src="assets/img/programs-keen.avif" alt="NYC Parks adaptive recreation">
+      <div class="panel-text">
+        <h3>NYC Parks Adaptive Recreation</h3>
+        <div class="black-text">
+          <ul>
+            <li>All kids sports programs + instructional clinics (whether geared towards disabilities or not) free, BUT participants must be registered members of a recreation center</li>
+            <li>Only a few of the sports programs are for kids w/ disabilities:</li>
+            <li>Each sports offers numerous programs per borough</li>
+            <li>Each borough has their own sports coordinator:
+              <ul>
+                <li>Bronx: Christopher.Suarez@parks.nyc.gov</li>
+                <li>Brooklyn: Wilson.Tenorio@parks.nyc.gov</li>
+                <li>Manhattan: Sandy.Requeno@parks.nyc.gov</li>
+                <li>Queens: Cynthaly.Pinckney@parks.nyc.gov</li>
+                <li>Staten Island: Richard.Costello@parks.nyc.gov</li>
+                <li>Track &amp; Field Paralympics Training
+                  <ul>
+                    <li>Ages 8 and up</li>
+                    <li>Want kids who are dedicated and have a big interest in track and field</li>
+                    <li>Training at many different recreation centers around NYC</li>
+                    <li>Goal: train so kids are able to later compete at Paralympic Games</li>
+                  </ul>
+                </li>
+                <li>Recreation Centers
+                  <ul>
+                    <li>For your child to participate in one of the NYC Parks-sponsored programs above, you need to be a registered member of a recreation center</li>
+                    <li>To register:
+                      <ul>
+                        <li>Use <a href="https://www.nycgovparks.org/facilities/recreationcenters" target="_blank" rel="noopener">this link</a> to browse the recreation centers and find one close to you</li>
+                        <li>Then, click "(Center Name) Details and Schedule" to view more info about the center(s) you chose to register at</li>
+                        <li>Use <a href="https://www.nycgovparks.org/pagefiles/173/NYC-Parks-Recreation-Center-Registration-Form__61e861752ad8e.pdf" target="_blank" rel="noopener">this link</a> to access the Recreation Center Membership Registration Form (completed on paper)
+                          <ul>
+                            <li>Pricing info is on that form</li>
+                          </ul>
+                        </li>
+                        <li>To learn more info and benefits of center memberships, use <a href="https://www.nycgovparks.org/programs/recreation-centers/membership" target="_blank" rel="noopener">this link</a> and <a href="https://www.nycgovparks.org/highlights/indoor-sports-and-fitness" target="_blank" rel="noopener">this link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>For more info about NYC Parks visit <a href="https://www.nycgovparks.org/" target="_blank" rel="noopener">https://www.nycgovparks.org</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="banner">
+  <img class="placeholder-img" src="assets/img/kids-racing-together.webp" alt="Kids racing together">
+</div>
+
+<footer>
+  <div class="footer-top">
+    <img src="assets/img/logo.svg" alt="Youth Adaptive Sports NYC logo">
+    <p class="footer-contact">
+      New York City, NY | info@youthadaptedsports.nyc | Building inclusive communities for all
+    </p>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="Instagram">ig</a>
+      <a href="#" aria-label="YouTube">yt</a>
+      <a href="#" aria-label="X">x</a>
+      <a href="#" aria-label="LinkedIn">in</a>
+      <a href="#" aria-label="TikTok">tt</a>
+    </div>
+  </div>
+  <p class="copyright">&copy; 2026 Youth Adaptive Sports NYC. All Rights Reserved.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.tab-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.tab-btn').forEach(function (b) {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.tab-panel').forEach(function (p) {
+        p.classList.remove('active');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      document.querySelector('.tab-panel[data-panel="' + btn.dataset.tab + '"]').classList.add('active');
+    });
+  });
+</script>
+<script type="module" src="assets/js/auth-ui.js"></script>
+
+</body>
+</html>
